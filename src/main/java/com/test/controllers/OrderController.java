@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class OrderController {
 
     @GetMapping(value = "/")
-    public String getWalletSummaries() {
+    public String getOrder() {
         return "success";
     }
 }
