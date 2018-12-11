@@ -26,7 +26,8 @@ public class OrderControllerTest {
     @Test
     public void testGetOrderPost() {
         HttpEntity<String> request = new HttpEntity<>("");
-        String body = this.restTemplate.postForObject("/api/v1/order/", request, String.class);
+        String body = this.restTemplate.postForObject("/api/v1/order/",
+                request, String.class);
         assertEquals("success", body);
     }
 }
