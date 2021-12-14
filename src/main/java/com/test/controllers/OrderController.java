@@ -1,17 +1,14 @@
 package com.test.controllers;
 
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(value = "/api/v1/order", produces = {MediaType.APPLICATION_JSON_UTF8_VALUE})
+@RequestMapping(value = "/api/v1/order")
 public class OrderController {
 
     @GetMapping(value = "/")
-    public String getOrder() {
+    public String getOrder(@RequestParam(name = "limit", defaultValue = "100" ) Integer limit) {
         return "success";
     }
 
